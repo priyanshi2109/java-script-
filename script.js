@@ -1,41 +1,66 @@
+// 4 pillers of DOM
 
-// variables in java script 
+// 1 . selection of an element of html
 
-// var x = 1; //global
-// {
-//     var x =2; //global
-// }
-// console.log(x);               // output: 2
+//  var a = document.querySelector("h1") // select h1 and store in variable a
+//  console.log(a)
 
+ // 2 .changing in html
+//  a.innerHTML = "changed  html"   // changed html
 
-// let a =10;
-// {
-//     let a = 20;
-//     console.log("inside block : ",a);
-// }
-// console.log("outside block : ",a);
+// or 
+// document.querySelector("h1").innerHTML="here it is"  // here it is 
 
-// let obj = {
-//     uid: 1,
-//     name: "priyanshi",
-//     age:20,
-//     email:"priyanshi@123.com"
-// };
-// let u1 = Symbol("uid");
-// obj[u1] = 2;
+// 3 . changing css
+
+// a.style.color = "blue"
+// a.style.backgroundColor = "lightpink"
 
 
-// symbol in java script 
+// 4. Event - listener
+
+// a.addEventListener("click",function(){
+//     a.innerHTML=("im changed ")
+//     a.style.color="blue"
+//     a.style.backgroundColor = "lightpink"
+// })
 
 
-//  let u1 = Symbol("uid");
-//  let u2 = Symbol("uid");
-                            //(u1 === u2);  output: false
+// add event listener example
 
-// type coversion java script - one of the type is automatically changed to another type 
+var bulb = document.querySelector("#bulb")
+var btn = document.querySelector("button")
+let flag = 0;
+btn.addEventListener("click",function(){
+    if(flag===0){
+        bulb.style.backgroundColor = "yellow"
+    console.log("Cliocked")
+   flag =1;
+    }
+    else{
+        bulb.style.backgroundColor = "transparent"
+    console.log(" again Clicked")
+   flag =0;
 
-5 + "5"; // output: "55" (number is converted to string)
-"5" * 2; // output: 10 (string is converted to number)
-true + 1; // output: 2 (boolean is converted to number)
+    }
+})
+
+
+
+// select multiple elements 
+
+// let h = document.querySelectorAll("h1")   // it will select all h1 in html
+// h.forEach(function(e){
+//     console.log(e)
+// })
+
+
+// select by id-name
+
+// let box = document.getElementById("box")
+
+// select by class name 
+
+// let box = document.getElementsByClassName("box")
 
 
