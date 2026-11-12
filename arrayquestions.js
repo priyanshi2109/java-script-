@@ -1,120 +1,66 @@
-// arrays 
+// array questions 
 
-// find the sum of all elements of an array 
+// for an array find the avearge of all students marks
 
-// let arr = [1,2,3,4,5];
-// let sum =0;
-// // for(let i=0;i<arr.length;i++){
-// //     sum = sum+arr[i];
-// // }
-// // console.log(sum);
-// for(let val of arr){
-//     sum = sum+val;
-// }
-// console.log(sum);
-
-
-// let arr = [1,2,3,4,"priyanshi",6,7,8];
-// console.log(arr);
-//  let a =arr.push("89");
-// console.log(arr,a);
-// arr.unshift(7);
-// console.log(arr);
-// let b = arr.unshift(9);
-// console.log(arr ,b);
-
-
-// spread operator 
-// let arr1=[1,2,4,5,67,77,88,88,88,889,99,]
-// let arr2=[...arr1,arr];
-// console.log(arr2);
-
-// join method 
-
-// let fruits = ["apple","banana","mango","graps"];
-// let a = fruits.join(" "); // string me convert kar dega 
-// console.log(fruits);
-// console.log(a);
-
-
-// include method = check karega ki element hai ya nhi 
-//  let fruits = ["apple","banana","mango","graps"];
-// let check = fruits.includes("banana");
-// console.log(check);// true 
-
-// find method = find the element in array
-
-// let check =fruits.find(function(fruit){
-//   return fruit === "banana";
-
-// })
-// console.log(check); // banana
-
-// sort method 
-
-// array iteration method or functional method 
-
-// map method in array= value or uski index deta hai
-
-
-// let arr = [1,2,3,4,5,];
-// let newarr = arr.map(function(value,index){
-//     console.log(value,index);
-//     return value * 2;
-// });
-// console.log(newarr);
-
-// filter method = condition k basis per new array deta h
-
-// let arr = [1,2,3,4,5,5];
-// let newarr = arr.filter(function(value){
-//     return value >2;
-// })
-// console.log(newarr);
-
-// reduce method = sum of all elements in array , previoues and current value deta hai
-
-// let arr = [40,66,77,88,78,65];
+// let arr = [40,60,70,80,90];
 // let sum = arr.reduce((previous,current)=>{
-//      return previous+current;
-// },0)
+//     return previous+current;
+// })
 // let average = sum/arr.length;
 // console.log(average);
 
 
-// create an array with given length and fill it with zero
+// create an array with the given length and fill with zer0
+
+// let arr = [];
+// let n = 5;
+// arr.length = n;
+// arr.fill(0);
+// console.log(arr);
 
 
-// let arr =[]
-// let n =5;
-// let newarr = Array(n).fill(0)
-// console.log(newarr);
-
-// array iteration method 
-
-// map method = value and index deta hai
+// cteate an array from 1 to n and fill it with 1 to n natural numbers 
 
 
-// let arr = [1,2,3,4,];
-// let newarr = arr.map((val,index)=>{
-//     console.log(val,index);
+// let n = 25;
+// let arr = new Array(n).fill(0);
+// arr = arr.map((value,index)=>{
+//     arr[index] = index + 1;
+//     return arr[index];
 // })
+// console.log(arr);
 
-// filter method = condition k basis per new array deta h
+// create an array 2,3,4,5,67,8
 
-// let arr = [1,2,3,4,5];
-// let newarr = arr.filter((val)=>{
-//     return val>2;
-// })
-// console.log(newarr);
-
-// reduce method = it works on previous and current value  and return a single value we can also assing previous value
+//  let arr = [2,3,4,5,67,8];
 
 
-let arr = [1,2,3,4,5,6,7,7,];
-let newarr = arr.reduce((previous,current)=>{
-    return previous +current;
+ // add 58 at the end and 62 at the begining 
+// arr.push(58);
+// arr.unshift(62);
+// console.log(arr);
 
-},0)
-console.log(newarr);
+// add 78 at the place of 4
+// arr.splice(2,1,78);
+// console.log(arr);
 
+// check whether 67 is present in the array or not
+// arr = arr.includes(67);
+// console.log(arr);
+
+
+// how to find the gi en thing is array or not
+
+// let test = [2] ;
+//  console.log(Array.isArray(test));
+
+// check if whether the given string is pelindrom or not
+
+let str = "hello";
+let reverse = str.split("").reverse().join("");
+if(str === reverse){
+    console.log("peliondrom");
+}
+else{
+    console.log("not pelindrom");
+}
