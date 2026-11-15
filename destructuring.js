@@ -1,11 +1,23 @@
-// Destructuring in arrays 
-// destructuring meaning break array element into single element and assign it to variable
- let arr = [1,2,3,4,5,]
- 
-//  let [a,b,c,d,e] = arr; // a=1, b=2, c=3, d=4, e=5
-//     console.log(a,b,c,d,e) // 1 2 3 4 5
-let [a,b,c, ,e] = arr; // a=1, b=2, c=3, e=5
-    console.log(a,b,c,e) // 1 2 3 5
+// destructuring in js 
 
+let obj ={
+    name: " priyanshi",
+    age: 20,
+    city: " jabalpur"
+}
 
+// why we use destructuring in js to access 
 
+// we can access the values of object using destructuring in js
+
+let {name,age,city}=obj;
+console.log(name);
+console.log(age);
+
+// array destructuring 
+
+let arr = ["priiyanshi",20,"jabalpur"];
+let [item1,item2,item3]=arr; // we can use any variable name
+console.log(item1);
+console.log(item2);
+console.log(item3);
