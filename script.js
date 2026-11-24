@@ -1,35 +1,46 @@
-//  selection of elements by tag name
-
-// let a = document.getElementsByTagName("h1")
-// console.log(a)
-
-// manupilating the html
+// attribute manipulation
 
 
-// let h1 = document.querySelector("h1");
-// console.log(h1.innerText);
-// heyy this is priyanshi 
+// let div = document.querySelector("#box")
+// console.log(div.attributes.id.value)
 
-// console.log(h1.textContent)
+// css manipulation
 
-// heyy
-//          this is
-         
-// priyanshi
+// let div = document.querySelector('div');
+// div.style.backgroundColor = 'red';
 
-// set in html codes
+// create a website with theme changing functionality 
 
-// h1.innerText = " i am a student of 3rd year cse branch"
-// console.log(h1.innerText);
+let button = document.querySelector("button");
+let body= document.querySelector('body');
+let div = document.querySelector("div")
+// let theme = 0;
+// button.addEventListener("click",()=>{
+// if(theme===0){
+//     body.style.backgroundColor= "black";
+//     theme = 1;
+// }
+// else{
+//     body.style.backgroundColor= "white";
+//     theme = 0;
 
+// }
+// })
+//create a website with theme changing functionality  through css
 
+button.addEventListener("click",()=>{
+    if(div.className==="light"){
+        body.style.backgroundColor= "black";
+        div.className = "dark";
+    }
+    else{
+        body.style.backgroundColor= "white";
+        div.className = "light";
+    }
+})
 
-// insertion in html
+// tgrough toggle
+// button.addEventListener("click",()=>{
+//    body.classList.toggle("dark")
 
-
-let div = document.querySelector('div');
-// first we have have to create an elemnt
-let p = document.createElement('p')
-div.append(p) // this is a text insertion or element insertion method in any div of html
-p.innerText = "im priyanshi"
-div.prepend(p)
+// })
